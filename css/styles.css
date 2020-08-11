@@ -126,8 +126,8 @@ p {
 }
 
 .site-nav .link,
-.contact-us .phone-link {
-	/* text-decoration: none; */
+.contact-us .mobile-link,
+.contact-us .email-link {
 	color: var(--title-color);
 }
 
@@ -151,6 +151,21 @@ p {
 
 .contact-us li:not(:last-child) {
 	margin-right: 30px;
+}
+
+.contact-us a:hover,
+.contact-us a:focus {
+	color: var(--accent-color);
+}
+
+.icon-mobile,
+.icon-email {
+	fill: currentColor;
+}
+
+.email-link:hover .icon-mobile,
+.mobile-link:hover .icon-email {
+	fill: var(--accent-color);
 }
 
 /* Section */
@@ -178,12 +193,51 @@ p {
 	background-color: coral;
 } */
 
+.social-link {
+	display: inline-flex;
+
+	height: 44px;
+	width: 44px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+	background-color: var(--accent-color);
+}
+
+.social-item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.social-svg {
+	fill: var(--white-color);
+	margin: auto;
+
+	width: 20px;
+	height: 20px;
+}
+
 /*-----------------  */
 /* Styles for Index */
 /* --------------- */
 
 /* Hero */
 .hero {
+	height: 600px;
+	max-width: 1600px;
+
+	padding-top: 200px;
+	padding-bottom: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner.jpg");
+	background-color: #c4c4c4;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 	text-align: center;
 }
 
@@ -198,7 +252,7 @@ p {
 	text-transform: uppercase;
 
 	color: var(--white-color);
-	background-color: fuchsia;
+	/* background-color: fuchsia; */
 }
 
 .button {
@@ -217,6 +271,22 @@ p {
 }
 
 /* Advantages & Work & Team */
+.advantage-icon {
+	display: inline-flex;
+	background-color: var(--bcg-color);
+
+	width: 100%;
+	height: 120px;
+	justify-content: center;
+	/* padding-top: 25px;
+	padding-bottom: 25px; */
+}
+
+.advantage-svg {
+	/* display: inline-block; */
+	margin: auto;
+}
+
 .advantage,
 .work,
 .team,
@@ -274,6 +344,12 @@ p {
 	margin-top: 10px;
 }
 
+.team-item {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+	background-color: var(--white-color);
+}
+
 .team-member {
 	margin-top: 30px;
 
@@ -297,6 +373,29 @@ p {
 .team-media {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.team-social .social-svg {
+	fill: #afb1b8;
+}
+
+.team-social > .social-link {
+	background-color: var(--white-color);
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.team-social > .social-link:hover .social-svg,
+.team-social > .social-link:focus .social-svg {
+	fill: var(--white-color);
+}
+
+.team-social > .social-link:hover,
+.team-social > .social-link:focus {
+	background-color: var(--accent-color);
 }
 
 /* Clients */
@@ -306,11 +405,22 @@ p {
 }
 
 .client {
+	display: flex;
 	width: calc((100% - 30px * 5) / 6);
+	height: 90px;
+
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	/* align-items: center; */
 }
 
 .client:not(:nth-child(6n)) {
 	margin-right: 30px;
+}
+
+.client-svg {
+	margin: auto;
 }
 
 /* Footer */
@@ -400,6 +510,9 @@ p {
 .project-item {
 	width: calc((100% - 30px * 2) / 3);
 	margin-bottom: 30px;
+	background: var(--white-color);
+	border: 1px solid #eeeeee;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item:not(:nth-child(3n)) {
